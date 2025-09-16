@@ -7,6 +7,7 @@
 struct InputManager {
     float positionX = 0.0f;
     float positionY = 0.0f;
+    bool isJumping = false;
     const float speed = 1.0f;
     float lastFrame = 0.0f;
     int windowedX = 100, windowedY = 100;

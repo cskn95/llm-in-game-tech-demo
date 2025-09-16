@@ -5,8 +5,13 @@ InputManager inputManager;
 void InputManager::process(GLFWwindow* window, float deltaTime) {
     if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS) positionX -= speed * deltaTime;
     if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS) positionX += speed * deltaTime;
-    if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) positionY += speed * deltaTime;
-    if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) positionY -= speed * deltaTime;
+
+    // Zıplama tuşunu (boşluk) kontrol et
+    if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS) {
+        isJumping = true;
+    } else {
+        isJumping = false;
+    }
 }
 
 void InputManager::onKeyPress(GLFWwindow* window, int key, int scancode, int action, int mods) const {

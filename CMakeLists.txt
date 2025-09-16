@@ -63,6 +63,12 @@ else()
 endif()
 
 # -------------------------
+# GLM
+# -------------------------
+find_package(glm REQUIRED)
+target_link_libraries(${PROJECT_NAME} PRIVATE glm::glm)
+
+# -------------------------
 # Ortak include klasörleri
 # -------------------------
 target_include_directories(${PROJECT_NAME} PRIVATE
