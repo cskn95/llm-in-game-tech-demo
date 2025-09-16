@@ -1,3 +1,4 @@
+#define GLFW_INCLUDE_NONE
 #include "Shader.h"
 #include "InputManager.h"
 #include "Window.h"
